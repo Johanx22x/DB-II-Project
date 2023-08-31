@@ -61,4 +61,8 @@
 
 ## HomeCredit_columns_description.csv
 
-This file contains descriptions for the columns in the various data files.
+-  This file contains descriptions for the columns in the various data files.
+
+# Diagrams 
+
+![unfixed diagram](home_credit.png)
