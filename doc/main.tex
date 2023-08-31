@@ -1,0 +1,32 @@
+% Preamble
+\input{lib/preamble.tex}
+
+% Front page
+\thispagestyle{empty}
+\title{\Large \textbf{Project}}
+\author{Johan Rodríguez \\Mathew Carballo}
+\affiliation{Instituto Tecnológico de Costa Rica}
+\course{IC4302 - Bases de Datos II}
+\professor{Ing. Efrén Jiménez}
+\duedate{\today}
+
+% Body
+\begin{document}
+\maketitle
+
+% Index
+\input{lib/index.tex}
+
+% Executive summary
+\input{src/executive_summary.tex}
+
+% Content
+\input{src/objectives.tex}
+\input{src/introduction.tex}
+\input{src/development.tex}
+\input{src/conclusions.tex}
+
+% Bibliography
+\bibliography{bibliography}
+
+\end{document}
