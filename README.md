@@ -10,7 +10,7 @@ to visualize some request to the database.
 ## Directories
 
 - `app`: This folder holds the web application.
-- `diagrams`: There is the ER & Relational model for the new database.
+- `diagrams`: Here is the ER & Relational model for the new database.
 - `doc`: The project main documentation, in LaTeX.
 - `migrator`: The dataset -> database migrator. Pending to select a method to do it.
 - `dataset`: Folder that contains the dataset and initial diagram.

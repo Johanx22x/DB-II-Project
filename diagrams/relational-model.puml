@@ -1,0 +1,6 @@
+' Relational model of the database
+@startuml
+
+skinparam linetype ortho
+
+@enduml
