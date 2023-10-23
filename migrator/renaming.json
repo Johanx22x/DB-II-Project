@@ -1,0 +1,924 @@
+{
+    "Application": {
+        "SK_ID_CURR": {
+            "name": "id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CONTRACT_TYPE": {
+            "name": "type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT": {
+            "name": "credit_amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_ANNUITY": {
+            "name": "annuity_amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_GOODS_PRICE": {
+            "name": "goods_price",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_TYPE_SUITE": {
+            "name": "companion",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        }
+    },
+
+    "Application_Date": {
+        "SK_ID_CURR": {
+            "name": "application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "WEEKDAY_APPR_PROCESS_START": {
+            "name": "weekday",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "HOUR_APPR_PROCESS_START": {
+            "name": "hour",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Client": {
+        "SK_ID_CURR": {
+            "name": "application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Application.id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CODE_GENDER": {
+            "name": "gender",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_EDUCATION_TYPE": {
+            "name": "education",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_HOUSING_TYPE": {
+            "name": "housing_type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "OCCUPATION_TYPE": {
+            "name": "occupation",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        }
+    },
+    
+    "Family": {
+        "SK_ID_CURR": {
+            "name": "client_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Client.application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_CHILDREN": {
+            "name": "children_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_FAMILY_STATUS": {
+            "name": "status",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_FAM_MEMBERS": {
+            "name": "members_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Income": {
+        "SK_ID_CURR": {
+            "name": "client_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Client.application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_INCOME_TOTAL": {
+            "name": "amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_INCOME_TYPE": {
+            "name": "type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Car": {
+        "SK_ID_CURR": {
+            "name": "client_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Client.application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "OWN_CAR_AGE": {
+            "name": "age",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        }
+    },
+
+    "Region": {
+        "SK_ID_CURR": {
+            "name": "client_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Client.application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "REGION_RATING_CLIENT": {
+            "name": "rating",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "REGION_RATING_CLIENT_W_CITY": {
+            "name": "rating_with_city",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Job": {
+        "SK_ID_CURR": {
+            "name": "client_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Client.application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "ORGANIZATION_TYPE": {
+            "name": "type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        }
+    },
+
+    "Credit_Bureau_Application": {
+        "SK_ID_BUREAU": {
+            "name": "id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SK_ID_CURR": {
+            "name": "application_id",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "Application.id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CREDIT_ACTIVE": {
+            "name": "status",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CREDIT_CURRENCY": {
+            "name": "currency",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "DAYS_CREDIT": {
+            "name": "days_from_application",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT_MAX_OVERDUE": {
+            "name": "max_overdue",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        },
+        "CNT_CREDIT_PROLONG": {
+            "name": "times_prolonged",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT_SUM": {
+            "name": "amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT_SUM_DEBT": {
+            "name": "debt",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT_SUM_LIMIT": {
+            "name": "credit_limit",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        },
+        "CREDIT_TYPE": {
+            "name": "type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "DAYS_CREDIT_UPDATE": {
+            "name": "days_from_update",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_ANNUITY": {
+            "name": "annuity",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Credit_Bureau_Balance": {
+        "SK_ID_BUREAU": {
+            "name": "credit_bureau_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Credit_Bureau_Application.id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "MONTHS_BALANCE": {
+            "name": "months_balance",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "STATUS": {
+            "name": "status",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Previous_Application": {
+        "SK_ID_PREV": {
+            "name": "id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SK_ID_CURR": {
+            "name": "application_id",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "Application.id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CONTRACT_TYPE": {
+            "name": "type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_ANNUITY": {
+            "name": "annuity_amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_APPLICATION": {
+            "name": "application_amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT": {
+            "name": "credit_amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_DOWN_PAYMENT": {
+            "name": "down_payment",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_GOODS_PRICE": {
+            "name": "goods_price",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CASH_LOAN_PURPOSE": {
+            "name": "purpose",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CONTRACT_STATUS": {
+            "name": "status",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_PAYMENT_TYPE": {
+            "name": "payment_type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_TYPE_SUITE": {
+            "name": "companion",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CLIENT_TYPE": {
+            "name": "client_type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CLIENT_TYPE": {
+            "name": "client_type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_GOODS_CATEGORY": {
+            "name": "goods_type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_PORTFOLIO": {
+            "name": "portfolio",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_PRODUCT_TYPE": {
+            "name": "product_type",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CHANNEL_TYPE": {
+            "name": "channel",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SELLERPLACE_AREA": {
+            "name": "seller_area",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_SELLER_INDUSTRY": {
+            "name": "seller_industry",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_PAYMENT": {
+            "name": "payment_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_YIELD_GROUP": {
+            "name": "yield_group",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "PRODUCT_COMBINATION": {
+            "name": "product_combination",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Reject": {
+        "CODE_REJECT_REASON": {
+            "name": "reason",
+            "type": "str",
+            "primary_key": true,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Previous_Application_Reject": {
+        "SK_ID_PREV": {
+            "name": "previous_application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Previous_Application.id",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Previous_Application_Date": {
+        "SK_ID_PREV": {
+            "name": "previous_application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Previous_Application.id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "WEEKDAY_APPR_PROCESS_START": {
+            "name": "weekday",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "HOUR_APPR_PROCESS_START": {
+            "name": "hour",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+        "Credit_Card_Balance": {
+        "SK_ID_PREV": {
+            "name": "previous_application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Credit_Card.previous_application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "MONTHS_BALANCE": {
+            "name": "months_balance",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_BALANCE": {
+            "name": "balance",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_CREDIT_LIMIT_ACTUAL": {
+            "name": "credit_limit",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_DRAWINGS_ATM_CURRENT": {
+            "name": "drawings_atm",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_DRAWINGS_CURRENT": {
+            "name": "drawings",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_DRAWINGS_OTHER_CURRENT": {
+            "name": "drawings_other",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_DRAWINGS_POS_CURRENT": {
+            "name": "drawings_goods",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_INST_MIN_REGULARITY": {
+            "name": "min_installment",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_PAYMENT_CURRENT": {
+            "name": "payment",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_PAYMENT_TOTAL_CURRENT": {
+            "name": "total_payment",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_RECEIVABLE_PRINCIPAL": {
+            "name": "principal_receivable",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_RECIVABLE": {
+            "name": "receivable",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_TOTAL_RECEIVABLE": {
+            "name": "total_receivable",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_DRAWINGS_ATM_CURRENT": {
+            "name": "drawings_atm_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_DRAWINGS_CURRENT": {
+            "name": "drawings_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_DRAWINGS_OTHER_CURRENT": {
+            "name": "drawings_other_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_DRAWINGS_POS_CURRENT": {
+            "name": "drawings_goods_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_INSTALMENT_MATURE_CUM": {
+            "name": "total_installment_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CONTRACT_STATUS": {
+            "name": "status",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SK_DPD": {
+            "name": "days_past_due",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SK_DPD_DEF": {
+            "name": "days_past_due_debts",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    },
+
+    "Installment_Payment": {
+        "SK_ID_PREV": {
+            "name": "previous_application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Installment.previous_application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NUM_INSTALMENT_VERSION": {
+            "name": "version",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NUM_INSTALMENT_NUMBER": {
+            "name": "number",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "DAYS_INSTALMENT": {
+            "name": "days_from_application",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "DAYS_ENTRY_PAYMENT": {
+            "name": "days_from_payment",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_INSTALMENT": {
+            "name": "amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_INSTALMENT": {
+            "name": "amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "AMT_PAYMENT": {
+            "name": "payment_amount",
+            "type": "float",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": true,
+            "default": ""
+        }
+    },
+
+    "Balance": {
+        "SK_ID_PREV": {
+            "name": "previous_application_id",
+            "type": "int",
+            "primary_key": true,
+            "foreign_key": "Balance.previous_application_id",
+            "can_be_null": false,
+            "default": ""
+        },
+        "MONTHS_BALANCE": {
+            "name": "months_balance",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_INSTALMENT": {
+            "name": "installment_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "CNT_INSTALMENT_FUTURE": {
+            "name": "future_installment_count",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "NAME_CONTRACT_STATUS": {
+            "name": "status",
+            "type": "str",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SK_DPD": {
+            "name": "days_past_due",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        },
+        "SK_DPD_DEF": {
+            "name": "days_past_due_debts",
+            "type": "int",
+            "primary_key": false,
+            "foreign_key": "",
+            "can_be_null": false,
+            "default": ""
+        }
+    }
+}
