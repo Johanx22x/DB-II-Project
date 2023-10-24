@@ -1,8 +1,9 @@
 {
-    "Application": {
+    "Application.Application": {
         "SK_ID_CURR": {
             "name": "id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "",
             "can_be_null": false,
@@ -11,6 +12,7 @@
         "NAME_CONTRACT_TYPE": {
             "name": "type",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -19,6 +21,7 @@
         "AMT_CREDIT": {
             "name": "credit_amount",
             "type": "float",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -27,6 +30,7 @@
         "AMT_ANNUITY": {
             "name": "annuity_amount",
             "type": "float",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -35,6 +39,7 @@
         "AMT_GOODS_PRICE": {
             "name": "goods_price",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -43,6 +48,7 @@
         "NAME_TYPE_SUITE": {
             "name": "companion",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -50,10 +56,11 @@
         }
     },
 
-    "Application_Date": {
+    "Application.Application_Date": {
         "SK_ID_CURR": {
             "name": "application_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "",
             "can_be_null": false,
@@ -62,6 +69,7 @@
         "WEEKDAY_APPR_PROCESS_START": {
             "name": "weekday",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -70,6 +78,7 @@
         "HOUR_APPR_PROCESS_START": {
             "name": "hour",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -77,10 +86,11 @@
         }
     },
 
-    "Client": {
+    "Client.Client": {
         "SK_ID_CURR": {
             "name": "application_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "Application.id",
             "can_be_null": false,
@@ -89,6 +99,7 @@
         "CODE_GENDER": {
             "name": "gender",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -97,6 +108,7 @@
         "NAME_EDUCATION_TYPE": {
             "name": "education",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -105,6 +117,7 @@
         "NAME_HOUSING_TYPE": {
             "name": "housing_type",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -113,6 +126,7 @@
         "OCCUPATION_TYPE": {
             "name": "occupation",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -120,10 +134,11 @@
         }
     },
     
-    "Family": {
+    "Client.Family": {
         "SK_ID_CURR": {
             "name": "client_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "Client.application_id",
             "can_be_null": false,
@@ -132,6 +147,7 @@
         "CNT_CHILDREN": {
             "name": "children_count",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -140,6 +156,7 @@
         "NAME_FAMILY_STATUS": {
             "name": "status",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -148,6 +165,7 @@
         "CNT_FAM_MEMBERS": {
             "name": "members_count",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -155,10 +173,11 @@
         }
     },
 
-    "Income": {
+    "Client.Income": {
         "SK_ID_CURR": {
             "name": "client_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "Client.application_id",
             "can_be_null": false,
@@ -167,6 +186,7 @@
         "AMT_INCOME_TOTAL": {
             "name": "amount",
             "type": "float",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -175,6 +195,7 @@
         "NAME_INCOME_TYPE": {
             "name": "type",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -182,10 +203,11 @@
         }
     },
 
-    "Car": {
+    "Client.Car": {
         "SK_ID_CURR": {
             "name": "client_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "Client.application_id",
             "can_be_null": false,
@@ -194,6 +216,7 @@
         "OWN_CAR_AGE": {
             "name": "age",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -201,10 +224,11 @@
         }
     },
 
-    "Region": {
+    "Client.Region": {
         "SK_ID_CURR": {
             "name": "client_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "Client.application_id",
             "can_be_null": false,
@@ -213,6 +237,7 @@
         "REGION_RATING_CLIENT": {
             "name": "rating",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -221,6 +246,7 @@
         "REGION_RATING_CLIENT_W_CITY": {
             "name": "rating_with_city",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -228,10 +254,11 @@
         }
     },
 
-    "Job": {
+    "Client.Job": {
         "SK_ID_CURR": {
             "name": "client_id",
             "type": "int",
+            "file_from": "application.csv",
             "primary_key": true,
             "foreign_key": "Client.application_id",
             "can_be_null": false,
@@ -240,6 +267,7 @@
         "ORGANIZATION_TYPE": {
             "name": "type",
             "type": "str",
+            "file_from": "application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -247,10 +275,11 @@
         }
     },
 
-    "Credit_Bureau_Application": {
+    "Credit_Bureau.Credit_Bureau_Application": {
         "SK_ID_BUREAU": {
             "name": "id",
             "type": "int",
+            "file_from": "bureau.csv",
             "primary_key": true,
             "foreign_key": "",
             "can_be_null": false,
@@ -259,6 +288,7 @@
         "SK_ID_CURR": {
             "name": "application_id",
             "type": "int",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "Application.id",
             "can_be_null": false,
@@ -267,6 +297,7 @@
         "CREDIT_ACTIVE": {
             "name": "status",
             "type": "str",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -275,6 +306,7 @@
         "CREDIT_CURRENCY": {
             "name": "currency",
             "type": "str",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -283,6 +315,7 @@
         "DAYS_CREDIT": {
             "name": "days_from_application",
             "type": "int",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -291,6 +324,7 @@
         "AMT_CREDIT_MAX_OVERDUE": {
             "name": "max_overdue",
             "type": "float",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -299,6 +333,7 @@
         "CNT_CREDIT_PROLONG": {
             "name": "times_prolonged",
             "type": "int",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -307,6 +342,7 @@
         "AMT_CREDIT_SUM": {
             "name": "amount",
             "type": "float",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -315,6 +351,7 @@
         "AMT_CREDIT_SUM_DEBT": {
             "name": "debt",
             "type": "float",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -323,6 +360,7 @@
         "AMT_CREDIT_SUM_LIMIT": {
             "name": "credit_limit",
             "type": "float",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -331,6 +369,7 @@
         "CREDIT_TYPE": {
             "name": "type",
             "type": "str",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -339,6 +378,7 @@
         "DAYS_CREDIT_UPDATE": {
             "name": "days_from_update",
             "type": "int",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -347,6 +387,7 @@
         "AMT_ANNUITY": {
             "name": "annuity",
             "type": "float",
+            "file_from": "bureau.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -354,10 +395,11 @@
         }
     },
 
-    "Credit_Bureau_Balance": {
+    "Credit_Bureau.Credit_Bureau_Balance": {
         "SK_ID_BUREAU": {
             "name": "credit_bureau_id",
             "type": "int",
+            "file_from": "bureau_balance.csv",
             "primary_key": true,
             "foreign_key": "Credit_Bureau_Application.id",
             "can_be_null": false,
@@ -366,6 +408,7 @@
         "MONTHS_BALANCE": {
             "name": "months_balance",
             "type": "int",
+            "file_from": "bureau_balance.csv",
             "primary_key": true,
             "foreign_key": "",
             "can_be_null": false,
@@ -374,6 +417,7 @@
         "STATUS": {
             "name": "status",
             "type": "str",
+            "file_from": "bureau_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -381,10 +425,11 @@
         }
     },
 
-    "Previous_Application": {
+    "Previous_Application.Previous_Application": {
         "SK_ID_PREV": {
             "name": "id",
             "type": "int",
+            "file_from": "previous_application.csv",
             "primary_key": true,
             "foreign_key": "",
             "can_be_null": false,
@@ -393,6 +438,7 @@
         "SK_ID_CURR": {
             "name": "application_id",
             "type": "int",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "Application.id",
             "can_be_null": false,
@@ -401,6 +447,7 @@
         "NAME_CONTRACT_TYPE": {
             "name": "type",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -409,6 +456,7 @@
         "AMT_ANNUITY": {
             "name": "annuity_amount",
             "type": "float",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -417,6 +465,7 @@
         "AMT_APPLICATION": {
             "name": "application_amount",
             "type": "float",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -425,6 +474,7 @@
         "AMT_CREDIT": {
             "name": "credit_amount",
             "type": "float",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -433,6 +483,7 @@
         "AMT_DOWN_PAYMENT": {
             "name": "down_payment",
             "type": "float",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -441,6 +492,7 @@
         "AMT_GOODS_PRICE": {
             "name": "goods_price",
             "type": "float",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -449,6 +501,7 @@
         "NAME_CASH_LOAN_PURPOSE": {
             "name": "purpose",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -457,6 +510,7 @@
         "NAME_CONTRACT_STATUS": {
             "name": "status",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -465,6 +519,7 @@
         "NAME_PAYMENT_TYPE": {
             "name": "payment_type",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -473,6 +528,7 @@
         "NAME_TYPE_SUITE": {
             "name": "companion",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -481,6 +537,7 @@
         "NAME_CLIENT_TYPE": {
             "name": "client_type",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -489,6 +546,7 @@
         "NAME_CLIENT_TYPE": {
             "name": "client_type",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -497,6 +555,7 @@
         "NAME_GOODS_CATEGORY": {
             "name": "goods_type",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -505,6 +564,7 @@
         "NAME_PORTFOLIO": {
             "name": "portfolio",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -513,6 +573,7 @@
         "NAME_PRODUCT_TYPE": {
             "name": "product_type",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -521,6 +582,7 @@
         "CHANNEL_TYPE": {
             "name": "channel",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -529,6 +591,7 @@
         "SELLERPLACE_AREA": {
             "name": "seller_area",
             "type": "int",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -537,6 +600,7 @@
         "NAME_SELLER_INDUSTRY": {
             "name": "seller_industry",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -545,6 +609,7 @@
         "CNT_PAYMENT": {
             "name": "payment_count",
             "type": "int",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -553,6 +618,7 @@
         "NAME_YIELD_GROUP": {
             "name": "yield_group",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -561,39 +627,28 @@
         "PRODUCT_COMBINATION": {
             "name": "product_combination",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
             "default": ""
-        }
-    },
-
-    "Reject": {
+        },
         "CODE_REJECT_REASON": {
-            "name": "reason",
+            "name": "reject_reason",
             "type": "str",
-            "primary_key": true,
+            "file_from": "previous_application.csv",
+            "primary_key": false,
             "foreign_key": "",
-            "can_be_null": false,
+            "can_be_null": true,
             "default": ""
         }
     },
 
-    "Previous_Application_Reject": {
+    "Previous_Application.Previous_Application_Date": {
         "SK_ID_PREV": {
             "name": "previous_application_id",
             "type": "int",
-            "primary_key": true,
-            "foreign_key": "Previous_Application.id",
-            "can_be_null": false,
-            "default": ""
-        }
-    },
-
-    "Previous_Application_Date": {
-        "SK_ID_PREV": {
-            "name": "previous_application_id",
-            "type": "int",
+            "file_from": "previous_application.csv",
             "primary_key": true,
             "foreign_key": "Previous_Application.id",
             "can_be_null": false,
@@ -602,6 +657,7 @@
         "WEEKDAY_APPR_PROCESS_START": {
             "name": "weekday",
             "type": "str",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -610,6 +666,7 @@
         "HOUR_APPR_PROCESS_START": {
             "name": "hour",
             "type": "int",
+            "file_from": "previous_application.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -617,10 +674,11 @@
         }
     },
 
-        "Credit_Card_Balance": {
+    "Previous_Application.Credit_Card_Balance": {
         "SK_ID_PREV": {
             "name": "previous_application_id",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": true,
             "foreign_key": "Credit_Card.previous_application_id",
             "can_be_null": false,
@@ -629,6 +687,7 @@
         "MONTHS_BALANCE": {
             "name": "months_balance",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -637,6 +696,7 @@
         "AMT_BALANCE": {
             "name": "balance",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -645,6 +705,7 @@
         "AMT_CREDIT_LIMIT_ACTUAL": {
             "name": "credit_limit",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -653,6 +714,7 @@
         "AMT_DRAWINGS_ATM_CURRENT": {
             "name": "drawings_atm",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -661,6 +723,7 @@
         "AMT_DRAWINGS_CURRENT": {
             "name": "drawings",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -669,6 +732,7 @@
         "AMT_DRAWINGS_OTHER_CURRENT": {
             "name": "drawings_other",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -677,6 +741,7 @@
         "AMT_DRAWINGS_POS_CURRENT": {
             "name": "drawings_goods",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -685,6 +750,7 @@
         "AMT_INST_MIN_REGULARITY": {
             "name": "min_installment",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -693,6 +759,7 @@
         "AMT_PAYMENT_CURRENT": {
             "name": "payment",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -701,6 +768,7 @@
         "AMT_PAYMENT_TOTAL_CURRENT": {
             "name": "total_payment",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -709,6 +777,7 @@
         "AMT_RECEIVABLE_PRINCIPAL": {
             "name": "principal_receivable",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -717,6 +786,7 @@
         "AMT_RECIVABLE": {
             "name": "receivable",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -725,6 +795,7 @@
         "AMT_TOTAL_RECEIVABLE": {
             "name": "total_receivable",
             "type": "float",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -733,6 +804,7 @@
         "CNT_DRAWINGS_ATM_CURRENT": {
             "name": "drawings_atm_count",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -741,6 +813,7 @@
         "CNT_DRAWINGS_CURRENT": {
             "name": "drawings_count",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -749,6 +822,7 @@
         "CNT_DRAWINGS_OTHER_CURRENT": {
             "name": "drawings_other_count",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -757,6 +831,7 @@
         "CNT_DRAWINGS_POS_CURRENT": {
             "name": "drawings_goods_count",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -765,6 +840,7 @@
         "CNT_INSTALMENT_MATURE_CUM": {
             "name": "total_installment_count",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -773,6 +849,7 @@
         "NAME_CONTRACT_STATUS": {
             "name": "status",
             "type": "str",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -781,6 +858,7 @@
         "SK_DPD": {
             "name": "days_past_due",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -789,6 +867,7 @@
         "SK_DPD_DEF": {
             "name": "days_past_due_debts",
             "type": "int",
+            "file_from": "credit_card_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -796,10 +875,11 @@
         }
     },
 
-    "Installment_Payment": {
+    "Previous_Application.Installment_Payment": {
         "SK_ID_PREV": {
             "name": "previous_application_id",
             "type": "int",
+            "file_from": "installments_payments.csv",
             "primary_key": true,
             "foreign_key": "Installment.previous_application_id",
             "can_be_null": false,
@@ -808,6 +888,7 @@
         "NUM_INSTALMENT_VERSION": {
             "name": "version",
             "type": "float",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -816,6 +897,7 @@
         "NUM_INSTALMENT_NUMBER": {
             "name": "number",
             "type": "int",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -824,6 +906,7 @@
         "DAYS_INSTALMENT": {
             "name": "days_from_application",
             "type": "int",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -832,6 +915,7 @@
         "DAYS_ENTRY_PAYMENT": {
             "name": "days_from_payment",
             "type": "int",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -840,6 +924,7 @@
         "AMT_INSTALMENT": {
             "name": "amount",
             "type": "float",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -848,6 +933,7 @@
         "AMT_INSTALMENT": {
             "name": "amount",
             "type": "float",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -856,6 +942,7 @@
         "AMT_PAYMENT": {
             "name": "payment_amount",
             "type": "float",
+            "file_from": "installments_payments.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": true,
@@ -863,10 +950,11 @@
         }
     },
 
-    "Balance": {
+    "Application.Balance": {
         "SK_ID_PREV": {
             "name": "previous_application_id",
             "type": "int",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": true,
             "foreign_key": "Balance.previous_application_id",
             "can_be_null": false,
@@ -875,6 +963,7 @@
         "MONTHS_BALANCE": {
             "name": "months_balance",
             "type": "int",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -883,6 +972,7 @@
         "CNT_INSTALMENT": {
             "name": "installment_count",
             "type": "int",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -891,6 +981,7 @@
         "CNT_INSTALMENT_FUTURE": {
             "name": "future_installment_count",
             "type": "int",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -899,6 +990,7 @@
         "NAME_CONTRACT_STATUS": {
             "name": "status",
             "type": "str",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -907,6 +999,7 @@
         "SK_DPD": {
             "name": "days_past_due",
             "type": "int",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,
@@ -915,6 +1008,7 @@
         "SK_DPD_DEF": {
             "name": "days_past_due_debts",
             "type": "int",
+            "file_from": "POS_CASH_balance.csv",
             "primary_key": false,
             "foreign_key": "",
             "can_be_null": false,

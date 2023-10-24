@@ -44,7 +44,7 @@ CREATE TABLE Application.Application (
     type            VARCHAR(255) NOT NULL,
     credit_amount   FLOAT NOT NULL,
     annuity_amount  FLOAT NOT NULL,
-    goods_price     INT NOT NULL,
+    goods_price     FLOAT NOT NULL,
     companion       VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
@@ -54,9 +54,9 @@ GO
 CREATE TABLE Application.Application_Date (
     application_id  INT NOT NULL,
     weekday         VARCHAR(255) NOT NULL,
-    hour            INT NOT NULL,
+    hour            FLOAT NOT NULL,
     PRIMARY KEY (application_id, weekday),
-    CONSTRAINT FK_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
+    CONSTRAINT FK_Application_Date_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
 );
 GO
 
@@ -68,18 +68,18 @@ CREATE TABLE Client.Client (
     housing_type    VARCHAR(255) NOT NULL,
     occupation      VARCHAR(255) NOT NULL,
     PRIMARY KEY (application_id),
-    CONSTRAINT FK_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
+    CONSTRAINT FK_Client_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
 );
 GO
 
 -- Create the Family table
 CREATE TABLE Client.Family (
     client_id       INT NOT NULL,
-    children_count  INT NOT NULL,
+    children_count  FLOAT NOT NULL,
     status          VARCHAR(255) NOT NULL,
-    members_count   INT NOT NULL,
+    members_count   FLOAT NOT NULL,
     PRIMARY KEY (client_id),
-    CONSTRAINT FK_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
+    CONSTRAINT FK_Family_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
 );
 GO
 
@@ -89,16 +89,16 @@ CREATE TABLE Client.Income (
     amount          FLOAT NOT NULL,
     type            VARCHAR(255) NOT NULL,
     PRIMARY KEY (client_id),
-    CONSTRAINT FK_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
+    CONSTRAINT FK_Income_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
 );
 GO
 
 -- Create the Car table
 CREATE TABLE Client.Car (
     client_id       INT NOT NULL,
-    age             INT NOT NULL,
+    age             FLOAT NOT NULL,
     PRIMARY KEY (client_id),
-    CONSTRAINT FK_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
+    CONSTRAINT FK_Car_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
 );
 GO
 
@@ -108,7 +108,7 @@ CREATE TABLE Client.Region (
     rating              INT NOT NULL,
     rating_with_city    INT NOT NULL,
     PRIMARY KEY (client_id),
-    CONSTRAINT FK_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
+    CONSTRAINT FK_Region_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
 );
 GO
 
@@ -117,7 +117,7 @@ CREATE TABLE Client.Job (
     client_id       INT NOT NULL,
     type            VARCHAR(255),
     PRIMARY KEY (client_id),
-    CONSTRAINT FK_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
+    CONSTRAINT FK_Job_client_id FOREIGN KEY (client_id) REFERENCES Client.Client(application_id)
 );
 GO
 
@@ -133,21 +133,22 @@ CREATE TABLE Credit_Bureau.Credit_Bureau_Application (
     amount                  FLOAT NOT NULL,
     debt                    FLOAT NOT NULL,
     credit_limit            FLOAT,
-    credit_type             VARCHAR(255) NOT NULL,
+    type					VARCHAR(255) NOT NULL,
     days_from_update        INT NOT NULL,
     annuity                 FLOAT NOT NULL,
     PRIMARY KEY (id),
-    CONSTRAINT FK_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
+    CONSTRAINT FK_Credit_Bureau_Application_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
 );
 GO
 
 -- Create the Credit_Bureau_Balance table
 CREATE TABLE Credit_Bureau.Credit_Bureau_Balance (
+	id					INT IDENTITY NOT NULL,
     credit_bureau_id    INT NOT NULL,
     months_balance      INT NOT NULL,
     status              VARCHAR(255) NOT NULL,
-    PRIMARY KEY (credit_bureau_id, months_balance),
-    CONSTRAINT FK_credit_bureau_id FOREIGN KEY (credit_bureau_id) REFERENCES Credit_Bureau.Credit_Bureau_Application(id)
+    PRIMARY KEY (id),
+    CONSTRAINT FK_Credit_Bureau_Balance_credit_bureau_id FOREIGN KEY (credit_bureau_id) REFERENCES Credit_Bureau.Credit_Bureau_Application(id)
 );
 GO
 
@@ -169,32 +170,15 @@ CREATE TABLE Previous_Application.Previous_Application (
     goods_type          VARCHAR(255) NOT NULL,
     portfolio           VARCHAR(255) NOT NULL,
     product_type        VARCHAR(255) NOT NULL,
-    channel             VARCHAR(255) NOT NULL,
+    channel				VARCHAR(255) NOT NULL,
+	reject_reason		VARCHAR(255) NOT NULL,
     seller_area         INT NOT NULL,
     seller_industry     VARCHAR(255) NOT NULL,
-    payment_count       INT NOT NULL,
+    payment_count       FLOAT NOT NULL,
     yield_group         VARCHAR(255) NOT NULL,
     product_combination VARCHAR(255) NOT NULL,
     PRIMARY KEY (id),
-    CONSTRAINT FK_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
-);
-GO
-
--- Create the Reject table
-CREATE TABLE Previous_Application.Reject (
-    id          INT AUTO_INCREMENT NOT NULL,
-    reason      VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
-);
-GO
-
--- Create the Previous_Application_Reject table
-CREATE TABLE Previous_Application.Previous_Application_Reject (
-    previous_application_id     INT NOT NULL,
-    reject_id                   INT NOT NULL,
-    PRIMARY KEY (previous_application_id),
-    CONSTRAINT FK_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id),
-    CONSTRAINT FK_reject_id FOREIGN KEY (reject_id) REFERENCES Previous_Application.Reject(id)
+    CONSTRAINT FK_Previous_Application_application_id FOREIGN KEY (application_id) REFERENCES Application.Application(id)
 );
 GO
 
@@ -204,14 +188,14 @@ CREATE TABLE Previous_Application.Previous_Application_Date (
     weekday                     VARCHAR(255) NOT NULL,
     hour                        INT NOT NULL,
     PRIMARY KEY (previous_application_id, weekday),
-    CONSTRAINT FK_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
+    CONSTRAINT FK_Previous_Application_Date_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
 );
 GO
 
 -- Create the Credit_Card_Balance table
 CREATE TABLE Previous_Application.Credit_Card_Balance (
     previous_application_id     INT NOT NULL,
-    months_balance              INT NOT NULL,
+    months_balance              FLOAT NOT NULL,
     balance                     FLOAT NOT NULL,
     credit_limit                FLOAT NOT NULL,
     drawings_atm                FLOAT NOT NULL,
@@ -224,16 +208,16 @@ CREATE TABLE Previous_Application.Credit_Card_Balance (
     principal_receivable        FLOAT NOT NULL,
     receivable                  FLOAT NOT NULL,
     total_receivable            FLOAT NOT NULL,
-    drawings_atm_count          INT NOT NULL,
-    drawings_count              INT NOT NULL,
-    drawings_other_count        INT NOT NULL,
-    drawings_goods_count        INT NOT NULL,
-    total_installment_count     INT NOT NULL,
+    drawings_atm_count          FLOAT NOT NULL,
+    drawings_count              FLOAT NOT NULL,
+    drawings_other_count        FLOAT NOT NULL,
+    drawings_goods_count        FLOAT NOT NULL,
+    total_installment_count     FLOAT NOT NULL,
     status                      VARCHAR(255) NOT NULL,
-    days_past_due               INT NOT NULL,
-    days_past_due_debts         INT NOT NULL,
+    days_past_due               FLOAT NOT NULL,
+    days_past_due_debts         FLOAT NOT NULL,
     PRIMARY KEY (previous_application_id, months_balance),
-    CONSTRAINT FK_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
+    CONSTRAINT FK_Credit_Card_Balance_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
 );
 GO
 
@@ -242,12 +226,12 @@ CREATE TABLE Previous_Application.Installment_Payment (
     previous_application_id     INT NOT NULL,
     version                     FLOAT NOT NULL,
     number                      INT NOT NULL,
-    days_from_application       INT NOT NULL,
-    days_from_payment           INT NOT NULL,
+    days_from_application       FLOAT NOT NULL,
+    days_from_payment           FLOAT NOT NULL,
     amount                      FLOAT NOT NULL,
     payment_amount              FLOAT NOT NULL,
     PRIMARY KEY (previous_application_id, version, number),
-    CONSTRAINT FK_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
+    CONSTRAINT FK_Installment_Payment_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
 );
 GO
 
@@ -255,12 +239,15 @@ GO
 CREATE TABLE Application.Balance (
     previous_application_id     INT NOT NULL,
     months_balance              INT NOT NULL,
-    installment_count           INT NOT NULL,
-    future_installment_count    INT NOT NULL,
+    installment_count           FLOAT NOT NULL,
+    future_installment_count    FLOAT NOT NULL,
     status                      VARCHAR(255) NOT NULL,
     days_past_due               INT NOT NULL,
     days_past_due_debts         INT NOT NULL,
     PRIMARY KEY (previous_application_id, months_balance),
-    CONSTRAINT FK_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
+    CONSTRAINT FK_Balance_previous_application_id FOREIGN KEY (previous_application_id) REFERENCES Previous_Application.Previous_Application(id)
 );
+GO
+
+USE master
 GO
