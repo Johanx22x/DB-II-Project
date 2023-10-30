@@ -21,7 +21,6 @@ GO
 -- Application contains tables:
     -- Application
     -- Application_Date
-    -- Balance
 
 CREATE SCHEMA Credit_Bureau;
 GO 
@@ -37,6 +36,7 @@ GO
     -- Previous_Application_Reject
     -- Credit_Card_Balance
     -- Installment_Payment
+    -- Balance
 
 -- Create the Application table
 CREATE TABLE Application.Application (
@@ -236,7 +236,7 @@ CREATE TABLE Previous_Application.Installment_Payment (
 GO
 
 -- Create the Balance table
-CREATE TABLE Application.Balance (
+CREATE TABLE Previous_Application.Balance (
     previous_application_id     INT NOT NULL,
     months_balance              INT NOT NULL,
     installment_count           FLOAT NOT NULL,
