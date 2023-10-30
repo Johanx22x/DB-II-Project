@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-30T16:32:08.241Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" etag="xcoNKaPA8snTQBPUgIYM" version="21.7.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-30T16:32:26.929Z" agent="Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/116.0" etag="vVE8NCmWQ7vR65C3soHN" version="21.7.1" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="3116" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -101,7 +101,7 @@
         <mxCell id="r3nIBA3nrrym4UsCG5nR-45" value="&lt;div&gt;status&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-1358" y="780" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="r3nIBA3nrrym4UsCG5nR-48" value="Region" style="whiteSpace=wrap;html=1;align=center;rounded=0;fillColor=default;strokeColor=default;" parent="1" vertex="1">
+        <mxCell id="r3nIBA3nrrym4UsCG5nR-48" value="Region" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="-1054" y="1140" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zxDij7dAuYZul47DfUCF-83" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="r3nIBA3nrrym4UsCG5nR-49" target="r3nIBA3nrrym4UsCG5nR-48" edge="1">
