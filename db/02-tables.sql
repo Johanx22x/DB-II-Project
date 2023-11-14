@@ -1,42 +1,5 @@
--- MSSQL Home Credit Database
-CREATE DATABASE HomeCredit;
-GO
-
 USE HomeCredit;
 GO
-
--- Create the DB Schemas: 
-CREATE SCHEMA Client;
-GO
--- Client contains tables:
-    -- Client 
-    -- Family
-    -- Income
-    -- Car 
-    -- Region
-    -- Job
-
-CREATE SCHEMA Application;
-GO 
--- Application contains tables:
-    -- Application
-    -- Application_Date
-
-CREATE SCHEMA Credit_Bureau;
-GO 
--- Credit_Bureau contains tables:
-    -- Credit_Bureau_Application
-    -- Credit_Bureau_Balance
-
-CREATE SCHEMA Previous_Application;
-GO 
--- Previous_Application contains tables:
-    -- Previous_Application
-    -- Previous_Application_Date
-    -- Previous_Application_Reject
-    -- Credit_Card_Balance
-    -- Installment_Payment
-    -- Balance
 
 -- Create the Application table
 CREATE TABLE Application.Application (
@@ -236,7 +199,7 @@ CREATE TABLE Previous_Application.Installment_Payment (
 GO
 
 -- Create the Balance table
-CREATE TABLE Previous_Application.Balance (
+CREATE TABLE Application.Balance (
     previous_application_id     INT NOT NULL,
     months_balance              INT NOT NULL,
     installment_count           FLOAT NOT NULL,
