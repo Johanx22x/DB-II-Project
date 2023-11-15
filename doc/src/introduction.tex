@@ -1,1 +1,96 @@
-\section{Introduction}
+\section{Resumen ejecutivo}
+
+El proyecto de optimización de bases de datos para Home Credit se destaca por
+su enfoque exhaustivo en la gestión eficiente de grandes volúmenes de datos en
+el sector financiero. Al adoptar SQL Server como el Sistema de Gestión de Bases
+de Datos principal, se garantiza robustez y compatibilidad con estándares
+comerciales. Desde la construcción de modelos E-R hasta la implementación de
+funciones avanzadas como migración, seguridad y una interfaz web intuitiva,
+cada fase del proyecto se ha abordado con precisión y atención al detalle.
+
+La estrategia de migración, respaldada por un migrador eficiente en Go, ha
+demostrado su capacidad para transferir datos a una velocidad significativa,
+asegurando la coherencia y la integridad de la información. La inclusión de
+características como un servidor de auditoría, funciones de CRUD, triggers y
+niveles de acceso diferenciados refuerzan la seguridad de la base de datos,
+contribuyendo directamente a un análisis de riesgo crediticio más preciso y
+equitativo. La aplicación web desarrollada con Vue.js proporciona una interfaz
+visualmente atractiva para la presentación de datos, consolidando así un
+proyecto que no solo resuelve desafíos técnicos, sino que también sienta las
+bases para una gestión de bases de datos efectiva y adaptable a las demandas
+del mundo empresarial.
+
+En términos de rendimiento, las pruebas han validado la capacidad de la base de
+datos optimizada para manejar solicitudes simultáneas, marcando el éxito del
+proyecto en cumplir con los estándares y requisitos detallados. En conclusión,
+esta iniciativa representa un paso importante hacia la aplicación práctica de
+habilidades técnicas para abordar problemas empresariales del mundo real,
+particularmente en el ámbito financiero donde la precisión y la eficiencia son
+cruciales.
+
+\newpage
+
+\section{Introducción}
+
+En un entorno empresarial cada vez más orientado a los datos, la eficiente
+gestión de bases de datos se convierte en un pilar fundamental para el éxito de
+las organizaciones. Este proyecto, concebido en el marco del segundo semestre
+de 2023, no solo busca ser un ejercicio académico, sino una oportunidad
+concreta para aplicar habilidades técnicas y solucionar problemas del mundo
+real.
+
+La elección de SQL Server como SGBD principal no solo se basa en su robustez,
+sino en su amplio uso en el ámbito comercial, proporcionando un terreno fértil
+para la aplicación de conocimientos y técnicas avanzadas. El proyecto se
+sumerge en el sector financiero, utilizando datos proporcionados por Home
+Credit, una empresa que actualmente emplea métodos estadísticos y de
+aprendizaje automático para realizar predicciones en el ámbito del riesgo
+crediticio.
+
+La importancia del análisis de riesgo crediticio radica en la capacidad de
+otorgar préstamos de manera justa y sostenible. El proyecto busca no solo
+aplicar metodologías de bases de datos avanzadas sino también contribuir a un
+proceso que asegure que los clientes capaces de reembolso no sean rechazados
+injustamente, y que los préstamos se otorguen con condiciones que maximicen el
+éxito de los clientes.
+
+Las secciones siguientes detallarán la estrategia para abordar cada uno de los
+objetivos específicos, proporcionando una visión integral del proyecto desde su
+conceptualización hasta la implementación práctica. Este proyecto no solo es un
+desafío técnico; es un paso hacia la aplicación efectiva de habilidades para
+resolver problemas empresariales del mundo real.
+
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+Desarrollar un sistema de bases de datos integral utilizando SQL Server como
+plataforma principal, abarcando desde la conceptualización de modelos (E-R),
+modelos relacionales, esquemas, migradores, servidores de auditoría, funciones
+de inserción, triggers, consultas SARGABLES, índices no clúster, hasta la
+implementación de usuarios con diferentes niveles de acceso. El proyecto
+incluirá la creación de una interfaz de usuario eficiente, ya sea web, móvil o
+de escritorio, con un dashboard integrado.
+
+\subsection{Objetivos específicos}
+
+\begin{itemize}
+    \item Desarrollar un modelo E-R preciso que sirva como base para la
+        construcción de un modelo relacional coherente, asegurando la integridad y
+        estructura adecuada de la base de datos propuesta.
+
+    \item Crear esquemas organizativos para dividir las tablas de manera
+        eficiente, junto con un migrador que permita actualizaciones sin
+        comprometer la integridad de los datos. Implementar un servidor de
+        auditoría para mejorar la trazabilidad y seguridad de las
+        transacciones.
+
+    \item Diseñar funciones y triggers que garanticen la consistencia y validez
+        de la información ingresada. Además, desarrollar consultas SARGABLES y
+        construir índices no clúster para optimizar el rendimiento de las
+        consultas. Establecer usuarios con diferentes niveles de permisos y
+        crear una interfaz de usuario eficiente, como un sistema web, móvil o
+        de escritorio, con un dashboard capaz de cargar en un máximo de un
+        minuto y manejar un millón de registros por componente, respaldado por
+        una documentación completa que abarque todo el proceso de desarrollo.
+\end{itemize}

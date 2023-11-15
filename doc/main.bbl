@@ -1,0 +1,93 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Devart%
+}{%
+Devart%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+Devart}
+\APACinsertmetastar {%
+Devart}%
+\begin{APACrefauthors}%
+Devart.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+\APACrefbtitle {DbForge SQL complete - powerful T-SQL formatting tool.} {Dbforge sql complete - powerful t-sql formatting tool.}
+\newblock
+\begin{APACrefURL} \url{https://www.devart.com/dbforge/sql/sqlcomplete/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Google%
+}{%
+Google%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+Google}
+\APACinsertmetastar {%
+Google}%
+\begin{APACrefauthors}%
+Google.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+\APACrefbtitle {Charts | google for developers.} {Charts | google for developers.}
+\newblock
+\APACaddressPublisherEqAuth{}{Google}.
+\newblock
+\begin{APACrefURL} \url{https://developers.google.com/chart} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+OpenAI%
+}{%
+OpenAI%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+OpenAI}
+\APACinsertmetastar {%
+OpenAI}%
+\begin{APACrefauthors}%
+OpenAI.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+\APACrefbtitle {Chatgpt.} {Chatgpt.}
+\newblock
+\begin{APACrefURL} \url{https://openai.com/chatgpt} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+You%
+}{%
+You%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+You}
+\APACinsertmetastar {%
+You}%
+\begin{APACrefauthors}%
+You, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+\APACrefbtitle {The Progressive JavaScript Framework.} {The progressive javascript framework.}
+\newblock
+\begin{APACrefURL} \url{https://vuejs.org/} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
