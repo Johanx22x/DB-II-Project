@@ -59,7 +59,7 @@
 
     const state = reactive({
         johan_avatar: 'https://avatars.githubusercontent.com/u/101372687',
-        mathew_avatar: 'https://scontent.fsjo14-1.fna.fbcdn.net/v/t39.30808-6/311697568_3191601774438952_2599050419873419803_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=se-MdzYpgfUAX-dwncv&_nc_ht=scontent.fsjo14-1.fna&oh=00_AfA0m2K_fwYoocD1TBENxDwFswPLFfLs3uow2PgTX5QXmw&oe=653AD0B0',
+        mathew_avatar: 'https://i.imgur.com/cJ8RH5Q.jpg',
     });
 
     const { johan_avatar, mathew_avatar } = toRefs(state);

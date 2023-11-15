@@ -12,10 +12,10 @@
         <el-text>Home</el-text>
       </el-menu-item>
     </router-link>
-    <router-link to="/config" class="router-link">
+    <router-link to="/settings" class="router-link">
       <el-menu-item>
         <el-icon><Setting /></el-icon>
-        <el-text>Configuration</el-text>
+        <el-text>Settings</el-text>
       </el-menu-item>
     </router-link>
     <router-link to="/about" class="router-link">

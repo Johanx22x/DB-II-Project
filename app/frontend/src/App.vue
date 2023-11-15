@@ -4,7 +4,7 @@
       <el-aside width="12rem" class="h-100">
         <Navbar class="h-100" />
       </el-aside>
-      <el-main>
+      <el-main class="h-100">
         <router-view></router-view>
       </el-main>
     </el-container>

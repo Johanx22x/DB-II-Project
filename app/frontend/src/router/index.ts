@@ -1,11 +1,17 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    alias: ['/index.html'],
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/settings',
+    name: 'settings',
+    component: () => import(/* webpackChunkName: "settings" */ '../views/SettingsView.vue')
   },
   {
     path: '/about',
@@ -23,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 
